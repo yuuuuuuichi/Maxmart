@@ -1,1 +1,8 @@
-
+body{font-family:sans-serif;margin:0;padding:0}
+.screen{padding:1em}
+nav{position:fixed;bottom:0;width:100%;background:#eee;text-align:center;padding:.5em}
+nav button{margin:0 .5em}
+#scanner-input{position:absolute;opacity:0;pointer-events:none;}
+table{width:100%;border-collapse:collapse}
+th,td{border:1px solid #ccc;padding:.5em;text-align:center}
+button{padding:.5em 1em}
