@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>発注スキャナ</title>
+<link rel="stylesheet" href="app.css">
+<link rel="manifest" href="manifest.json">
+</head>
+<body>
+<!-- スキャン画面 -->
+<section id="screen-scan" class="screen">
+<h1>スキャン待ち</h1>
+<p>最後のJAN：<span id="last-jan">—</span></p>
+<p>この商品のカウント：<span id="last-count">0</span></p>
+<p>合計SKU：<span id="total-sku">0</span>　合計数：<span id="total-qty">0</span></p>
+<input id="scanner-input" type="text" autofocus autocomplete="off" spellcheck="false">
+</section>
 
+<!-- 編集画面 -->  
+<section id="screen-list" class="screen" style="display:none">  
+  <h1>発注リスト編集</h1>  
+  <table id="table-list">  
+    <thead><tr><th>JAN</th><th>数量</th><th>操作</th></tr></thead>  
+    <tbody></tbody>  
+  </table>  
+</section>  
+
+<!-- エクスポート画面 -->  
+<section id="screen-export" class="screen" style="display:none">  
+  <h1>エクスポート</h1>  
+  <p>SKU数：<span id="exp-sku">0</span>　総数：<span id="exp-qty">0</span></p>  
+  <button id="btn-export-csv">CSVをダウンロード</button>  
+  <button id="btn-export-mail">メール送信</button>  
+  <pre id="csv-preview" style="max-height:200px;overflow:auto;"></pre>  
+</section>  
+
+<!-- ナビ -->  
+<nav>  
+  <button data-show="screen-scan">スキャン</button>  
+  <button data-show="screen-list">編集</button>  
+  <button data-show="screen-export">送信</button>  
+</nav>  
+
+<script src="app.js"></script>
+  </body>
+</html>
